@@ -1,0 +1,54 @@
+body{background: #AFE5FF;}
+div#main_outer_div h1.h1_type_1{
+	border : 1px solid grey;
+	background: #f2f2f2;
+	padding: 5px;
+	font-size: 20px;
+	width: 525px;
+	color: #333333;
+	font-family: arial;
+}
+
+div#main_outer_div ol.ol_type_1{}
+
+
+div#main_outer_div span.meetupVals{
+	background: #f2f2f2 none repeat scroll 0 0;
+    display: inline-block;
+    padding: 2px 5px;
+    width: 250px;
+    font-size: 15px;
+    font-family: arial;
+}
+
+div#main_outer_div form#add_meetup_form
+{
+	margin-left: 40px;
+}
+
+div#main_outer_div form#add_meetup_form input[type='text']
+{
+	width: 250px;
+}
+div#main_outer_div form#add_meetup_form button[type='submit']
+{
+	margin-left: 1px;
+    width: 68px;
+}
+
+div#main_outer_div div#ol_wrapper_division
+{
+	margin-bottom: 5px;
+    max-height: 500px;
+    overflow-y: auto;
+    width: 525px;
+}
+
+form span.editable-controls input[type=text]
+{
+	width: 252px;
+}
+
+span.editable-buttons button{
+	width: 68px;
+}

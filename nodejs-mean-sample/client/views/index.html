@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="meetupApp"  ng-init="names=[]">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<title></title>
+		<meta name= "description" content="">
+		<meta name="viewport" content="width-device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="http://vitalets.github.io/angular-xeditable/dist/css/xeditable.css">
+	</head>
+	<body>
+		<!-- Meetups view -->
+		<div id = "main_outer_div" ng-controller="meetupsController">
+			<h1 class = "h1_type_1">There are {{meetups.length}} meet ups</h1>
+			<div id = "ol_wrapper_division">
+				<ol class = "ol_type_1">
+					<li ng-repeat = "(key, meetup) in meetups">
+						<span class = "meetupVals" editable-text="meetup.name" onbeforesave="updateMeetup(meetup._id, this);">{{meetup.name}}</span>
+						<span class = "deleteBtn">
+							<button type = "button" id = "{{meetup._id}}" ng-click="deleteMeetup(meetup._id, key)">Delete</button>
+						</span>
+					</li>
+				</ol>
+			</div>
+			<form ng-submit = "createMeetup()" id = "add_meetup_form">
+				<input type="text" placeholder="Meetup name" name = "jas" ng-model = "meetupName" ></input>
+				<button type = "submit">Add</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
+		<script type="text/javascript" src="http://vitalets.github.io/angular-xeditable/dist/js/xeditable.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/controllers/meetups-controller.js"></script>
+
+	</body>
+</html>	

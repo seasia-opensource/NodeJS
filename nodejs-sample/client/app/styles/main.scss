@@ -1,0 +1,89 @@
+ 
+
+@charset "utf-8";
+/* CSS Document */
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+/* TAGS */
+html,body { height:100%; margin:0;  padding:0; color:#555; font-size:14px; font-family: 'Open Sans', sans-serif; font-weight:normal;}
+*{ -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
+a:focus { outline:none;}
+form { margin:0; padding:0; }
+img { border:0;}
+input[type="text"], input[type="button"], input[type="email"], input[type="password"], input[type="tel"], input[type="search"], select, textarea {   border-radius:0; -webkit-appearance: none;-moz-appearance: none; appearance: none; }
+.clr { clear:both; height:5px;}
+a {text-decoration:none;}
+a:hover {text-decoration:none;}
+h1,h2,h3,h4,h5{ margin:0; padding:0;}
+/***** COlor Classes *****/
+/******* ALIGNMENT CLASSES *******/
+.left { float:left;}
+.right { float:right;}
+/******* TEXTFIELD CLASS  *******/
+.input {color:#666666; height:px; font-size:12px; width:0; font-family:Arial, Helvetica, sans-serif; padding:0;}
+/******* SMALL CLASSES *******/
+
+#outerwrapper { width:100%; margin:0 auto ; background-image: url(../images/map.png); background-size:cover; background-repeat:no-repeat; position: absolute; top: 0; bottom: 0;}
+.locations{width:100%; margin:0; padding:0; float:left; position:relative;}
+.locations ul{ margin:0; padding:0;}
+.locations ul li{ position:absolute; list-style-type:none; width:150px; }
+.locations ul li a{width:100%;}
+.locations ul li a img{width:100%;}
+
+.n-america{  top:125px; left:218px;}
+.europe{ position:absolute; top:137px; left:639px;}
+.asia{ position:absolute; top:253px; right:324px;}
+.s-america{ position:absolute; top:400px; left:209px;}
+.africa{ position:absolute; top:400px; left:615px;}
+.popup {
+    width: 700px;background: #444444; z-index: 9999;
+    position: absolute;
+    border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #000;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -350px;
+    overflow-x: auto;
+}
+.popup p{ font-size:15px; color:#fff;}
+.popup h2{ font-size:23px; color:#fff; font-weight:normal; word-wrap: break-word; text-align:left;}
+.popup-full{ width:100%; float:left; margin:20px 0 0 0; text-align:center;}
+.popup-full input[type="button"]{  white-space: pre-wrap; cursor:pointer; width:80%; border:none;-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; border-radius:5px; font-size:24px; margin:0px; background:#d86018; color:#fff; padding:2%; max-width:400px;}
+.textarea{ max-width:660px;    width: 100%; -moz-border-radius: 5px;
+	-webkit-border-radius: 5px; border-radius: 5px; min-height: 200px; margin: 15px 0 0 0; padding:20px; font-size: 1.5em;}
+.radio-outer{ width:auto; float:left; margin-right:30px; font-size:17px; color:#fff;}
+.radio-outer input{ margin:6px 5px 0 0; float:left;}
+.div-full{width:100%; float:left; margin:20px 0 0 0;}
+.textfield{ width:100%; border:none; padding:2%; font-size:20px; font-weight:normal;}
+.orange-btn{ word-wrap: break-word; cursor:pointer; width:80%; border:none; -moz-border-radius: 5px;
+	-webkit-border-radius: 5px; border-radius:5px; font-size:24px; margin:auto; background:#d86018; color:#fff; padding:2%; max-width:400px;;}
+.continue-outer{ width:100%; text-align:center; float:left; margin:30px 0 0 0;}
+
+/***** Responsive Css Starts *****/
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+.popup {
+    width: 600px; height: 500px;margin: -250px 0 0 -300px;}
+.popup h2{font-size: 21px;}
+.popup-full input[type="button"]{font-size: 24px;}
+.n-america{top:70px;left:142px;}
+.europe{top:80px;left:475px;}
+.asia{top:180px; right:223px;}
+.s-america{top:289px; left:135px;}
+.africa{top:316px; left:457px;}
+#outerwrapper{background-image: url(../images/map.png); background-size:100%; background-color:#ca5303;}
+.locations ul li{ width:130px; height:130px;}
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+
+}
+
+@media only screen and (min-width:320px) and (max-width:479px) {
+
+}

@@ -1,0 +1,60 @@
+﻿<div id="outerwrapper" ng-controller="HomeCtrl" >
+    <div class="locations">
+        <ul ng-repeat=" scenario in scenarios">
+            <li class="imgScenario" ng-style="{top:scenario.top,left:scenario.left}"><a href="javascript:;"
+                data-toggle="modal" data-target="#questionModal" ng-click="DisplayQuestion(scenario.id)">
+                <img id="{{scenario.id}}" src="{{scenario.defaultImage}}" alt="{{scenario.title}}" /></a></li>
+        </ul>
+    </div>
+    <div class="popup" id="initialModal" role="dialog" style="display: none;"  data-backdrop="static" >
+        <h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
+        <div class="div-full">
+            <div class="radio-outer">
+                <input name="radAnswer" type="radio" ng-model="isLead" value="1" />
+                Lead</div>
+            <div class="radio-outer">
+                <input name="radAnswer" type="radio" ng-model="isLead" value="0" />
+                Not a lead</div>
+        </div>
+        <div class="div-full">
+            <input class="textfield" placeholder="Player Name" type="text" value="player" ng-model="playerName" />
+        </div>
+        <div class="continue-outer">
+            <input class="orange-btn" type="button" value="Continue" data-toggle="modal" data-target="#initialModal" />
+        </div>
+    </div>
+    <div class="popup" id="questionModal" role="dialog" style="display: none;"  data-backdrop="static" >
+        <h2>
+            {{currentQuestion.title}}</h2>
+        <div ng-repeat="choice in currentQuestion.choices">
+            <div class="popup-full">
+                <input value="{{ choice.title }}" type="button" data-toggle="modal" data-target="#reasonModal"
+                    ng-click="RecordChoice(choice)" /></div>
+        </div>
+    </div>
+    <div class="popup" id="reasonModal" role="dialog" style="display: none;"  data-backdrop="static" >
+        <h2>
+            {{currentQuestion.title}}</h2>
+        <textarea class="textarea" ng-model="reasonText"> </textarea>
+        <div class="popup-full">
+            <input value="Continue" type="button" data-toggle="modal" data-target="#reasonModal"
+                ng-click="RecordResponse()" /></div>
+    </div>
+    <div class="popup" id="summaryModal" role="dialog" style="display: none;"  data-backdrop="static" >
+       <div class="popup-full">
+        <div ng-repeat="response in responses">
+            <h2>
+                {{response.questionText }}
+                <br /> &nbsp; &nbsp;{{response.choiceText}} because {{ response.reasonText}}
+            </h2>
+            <div class="clr">
+            </div>
+        </div>
+     
+            <input value="Close" type="button" data-toggle="modal" data-target="#summaryModal"
+                ng-click="ClearResponses()" /></div>
+    </div>
+</div>
