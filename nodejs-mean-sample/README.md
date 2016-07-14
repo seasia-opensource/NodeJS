@@ -1,4 +1,3 @@
-# mean-demo
-My first mean app CRUD
+Sample MEAN App
 
-I follwed https://www.youtube.com/watch?v=AEE7DY2AYvI&noredirect=1 to start development on this.
+We fololowed Mongoose, Express framework, NodeJS, AngularJS for this sample project.
